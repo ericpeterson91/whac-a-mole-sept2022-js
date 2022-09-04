@@ -2,6 +2,7 @@ const squares = document.querySelectorAll(".square");
 const mole = document.querySelector(".mole");
 const start = document.querySelector("#start");
 const pause = document.querySelector("#pause");
+const reset = document.querySelector('#reset')
 const timeLeft = document.querySelector("#time-left");
 const score = document.querySelector("#score");
 let result = 0;
@@ -45,7 +46,13 @@ const stopGame = () => {
     clearInterval(timer)
 }
 
+const resetGame = () => {
+    window.location.reload()
+}
+
 start.addEventListener('click', startGame)
 pause.addEventListener('click', stopGame)
+reset.addEventListener('click', resetGame)
+
 
 
