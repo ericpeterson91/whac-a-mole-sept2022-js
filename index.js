@@ -18,6 +18,13 @@ function randomSquare() {
   timeLeft.innerText = countdown
 
   hitPosition = randomSquare.id
+
+  if(timeLeft.innerText == 0) {
+    timeLeft.textContent = 0
+    clearInterval(timer)
+    alert(`Game over! Your score is ${result}`)
+    hitPosition = null
+  }
 }
 
 squares.forEach(square => {
@@ -39,4 +46,6 @@ const stopGame = () => {
 }
 
 start.addEventListener('click', startGame)
-pause.addEventListener('click', stopGame);
+pause.addEventListener('click', stopGame)
+
+
