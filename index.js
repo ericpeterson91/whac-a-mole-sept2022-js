@@ -15,8 +15,20 @@ function randomSquare() {
   let randomSquare = squares[Math.floor(Math.random() * 9)];
   randomSquare.classList.add("mole");
   countdown--
-    timeLeft.innerText = countdown
+  timeLeft.innerText = countdown
+
+  hitPosition = randomSquare.id
 }
+
+squares.forEach(square => {
+    square.addEventListener('mousedown', () => {
+        if (hitPosition == square.id) {
+            result++
+            score.innerText = result
+            hitPosition = null
+        }
+    })
+})
 
 const startGame = () => {
     timer = setInterval(randomSquare, 750)
