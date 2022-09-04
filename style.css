@@ -13,10 +13,20 @@
 .title-container {
     display: flex;
     justify-content: space-between;
-    margin: 10px;
-    width: 30vw;
+    align-items: center;
+    width: 20vw;
 }
 
+.mini-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#score, #time-left {
+    margin-top: -8px;
+}
 
 .grid {
     width: 600px;
