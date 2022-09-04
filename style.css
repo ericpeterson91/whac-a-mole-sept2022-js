@@ -28,16 +28,43 @@
     margin-top: -8px;
 }
 
+.button-container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+button {
+    width: 125px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start {
+    background-color: #393243;
+    color: white;
+    margin-right: 50px;
+}
+
+#pause {
+    background-color: #f3ac21;
+}
+
 .grid {
-    width: 600px;
-    height: 600px;
+    width: 501px;
+    height: 501px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .square {
-    height: 200px;
-    width: 200px;
+    height: 167px;
+    width: 167px;
     border: 1px solid black;
     box-sizing: border-box;
 }
@@ -45,5 +72,6 @@
 .mole {
     background-image: url('mole.jpeg');
     background-size: contain;
+    cursor: pointer;
 }
 
